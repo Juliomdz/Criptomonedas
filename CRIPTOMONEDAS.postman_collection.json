@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "6710e60b-9cda-4a07-8d25-f5e35cd433bc",
+		"name": "CRIPTOMONEDAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/usuarios",
+			"item": [
+				{
+					"name": "Verificar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mail",
+									"value": "admin@admin.com",
+									"type": "default"
+								},
+								{
+									"key": "tipo",
+									"value": "admin",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "admin123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/criptomonedas",
+			"item": [
+				{
+					"name": "/ (alta)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "precio",
+									"value": "500",
+									"type": "default"
+								},
+								{
+									"key": "nombre",
+									"value": "yaguaretecoin2",
+									"type": "default"
+								},
+								{
+									"key": "nacionalidad",
+									"value": "alemania",
+									"type": "default"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/xampp/htdocs/Criptomonedas/app/FotosBackup/yaguaretecoin.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{id} (modificar)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "precio",
+									"value": "500",
+									"type": "default"
+								},
+								{
+									"key": "nombre",
+									"value": "yaguaretecoin",
+									"type": "default"
+								},
+								{
+									"key": "nacionalidad",
+									"value": "argentina",
+									"type": "default"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/xampp/htdocs/Criptomonedas/app/FotosBackup/yaguaretecoin.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{id} (baja)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "precio",
+									"value": "500",
+									"type": "default"
+								},
+								{
+									"key": "nombre",
+									"value": "yaguaretecoin",
+									"type": "default"
+								},
+								{
+									"key": "nacionalidad",
+									"value": "alemania",
+									"type": "default"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/xampp/htdocs/Criptomonedas/FotosAltasCriptos/yaguaretecoin.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (getAll)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/csv (getCSV)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"csv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logs/csv (getLogsCSV)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/logs/csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"logs",
+								"csv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logs/pdf (getLogsPDF)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/logs/pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"logs",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ (getAll nacionalidad)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/?nacionalidad=argentina",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								""
+							],
+							"query": [
+								{
+									"key": "nacionalidad",
+									"value": "argentina"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{id} (getById)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"2"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{id} (getById) Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/criptomonedas/pdf/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"criptomonedas",
+								"pdf",
+								"2"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/ventas",
+			"item": [
+				{
+					"name": "/ (nuevaVenta)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cantidad",
+									"value": "5",
+									"type": "default"
+								},
+								{
+									"key": "fecha",
+									"value": "2023-07-12",
+									"type": "default"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/C:/xampp/htdocs/Criptomonedas/app/FotosBackup/germancoin.jpg"
+								},
+								{
+									"key": "idUsuario",
+									"value": "5",
+									"type": "default"
+								},
+								{
+									"key": "idCripto",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/ventas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"ventas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{nacionalidad}/{desde}/{hasta}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/ventas/alemania/2023-07-10/2023-07-13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"ventas",
+								"alemania",
+								"2023-07-10",
+								"2023-07-13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/{nombreCripto}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/ventas/yaguaretecoin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"ventas",
+								"yaguaretecoin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ultimomes/{orden} (ASC/DESC)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/ventas/ultimomes/DESC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"ventas",
+								"ultimomes",
+								"DESC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ultimomesCSV/{orden} (ASC/DESC) CSV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/criptomonedas/app/ventas/ultimomesCSV/DESC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"criptomonedas",
+								"app",
+								"ventas",
+								"ultimomesCSV",
+								"DESC"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODkwOTUwNzcsImV4cCI6MjIxNDY5NTA3NywiYXVkIjoiZTc2Y2JmMWEyOTZiOGM3NTEwNzc4ZGM2MzEyNDZmYzRlMTBjNjRjMiIsImRhdGEiOnsiaWQiOjEsIm1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJ0aXBvIjoiYWRtaW4ifSwiYXBwIjoiVGVzdCBKV1QifQ.5CLxuohFfjUccRtdw_NQ6QtzfiE7pGOt678qsmx7s20",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
